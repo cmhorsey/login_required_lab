@@ -3,12 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
-
   def current_user
-    if session[:name].present?
-      session[:name]
-    else
-      nil
-    end
+    session[:name]
   end
 end
